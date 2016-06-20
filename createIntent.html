@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSSample</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    $(function() {
+        var params = {
+            // Request parameters
+            "method":"POST"
+        };
+      
+        $.ajax({
+            url: "https://api.projectoxford.ai/luis/v1.0/prog/apps/74202f4c-0c94-4b48-a847-04d7154f1854/intents?" + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Content-Type","application/json");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","929a376180624437bc881e4501940e3e");
+            },
+            type: "POST",
+            // Request body
+            data: "{body}",
+        })
+        // console.log('url created');
+        .done(function(data) {
+            alert("success");
+        })
+        .fail(function() {
+            alert("error");
+        });
+    });
+</script>
+
+<h1>createIntent</h1>
+
+</body>
+</html>
