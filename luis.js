@@ -175,8 +175,8 @@ class Luis {
 }
 
 let luis = new Luis({
-  appId: '8b2dc7ac-9be1-4f70-b9a7-a09e4def85ac',
-  subscriptionKey: '0e6a5c9f33a14422ad6f1bad7c77926e'
+  appId: '74202f4c-0c94-4b48-a847-04d7154f1854',
+  subscriptionKey: '929a376180624437bc881e4501940e3e'
 });
 
 let intents = [ 'end', 'reject', 'switch', 'cancel', 'startBottleFeeding',
